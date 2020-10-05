@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "198927197131",
+    "firebase_url": "https://que-comemos-27f71.firebaseio.com",
+    "project_id": "que-comemos-27f71",
+    "storage_bucket": "que-comemos-27f71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198927197131:android:175ece70610f0e0c088c4e",
+        "android_client_info": {
+          "package_name": "com.example.quecomemos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198927197131-9joa3i792rbk8cnoi07jldhglj8r61fb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quecomemos",
+            "certificate_hash": "f1eb379d53b02981b9512fc439834ec2855d7f69"
+          }
+        },
+        {
+          "client_id": "198927197131-j1rcbbbtpn6b9bdke2o0jtebd30l4gn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnUvxuUFIMoN82-5uRNSz79vcc2RCgd8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198927197131-j1rcbbbtpn6b9bdke2o0jtebd30l4gn1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
