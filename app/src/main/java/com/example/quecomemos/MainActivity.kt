@@ -3,26 +3,49 @@ package com.example.quecomemos
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.quecomenos.R
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
     private val RC_SIGN_IN = 1024
-    private var name =""
-    private var email = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        login()
+        session()
 
     }//***********fin OnCreate********************
+
+    private fun session() {
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            program()
+        } else {
+            login()
+        }
+    }
+
+    private fun program() {
+        val user = FirebaseAuth.getInstance().currentUser
+        user?.let {
+            // Name, email address, and profile photo Url
+            val name = user.displayName
+            val email = user.email
+            val photoUrl = user.photoUrl
+            tv_1.text = name
+            tv_2.text = email
+            img.setImageURI(photoUrl)
+        }
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -32,8 +55,7 @@ class MainActivity : AppCompatActivity() {
 
             if (resultCode == Activity.RESULT_OK) {
                 val user = FirebaseAuth.getInstance().currentUser
-                name = user?.displayName.toString()
-                email = user?.email.toString()
+                Toast.makeText(this, "Bienvenido/a "+ user?.displayName.toString()+" a Qué Comemos?", Toast.LENGTH_LONG).show()
             } else {
                 showAlert()
             }
