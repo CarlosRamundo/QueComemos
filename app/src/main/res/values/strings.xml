@@ -2,7 +2,8 @@
     <string name="app_name">Que Comenos</string>
 
     <string name="show_alert">Error de registro o ingreso de usuario, revise los dÐtos y vuelva a intentarlo!!</string>
-    <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
-    <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
+    <string name="facebook_application_id" translatable="false">443268619965477</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb443268619965477</string>
+
 
 </resources>

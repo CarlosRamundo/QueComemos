@@ -11,6 +11,9 @@ import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
+import com.facebook.FacebookSdk
+import com.facebook.appevents.AppEventsLogger
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,8 +44,8 @@ class MainActivity : AppCompatActivity() {
             val name = user.displayName
             val email = user.email
             val photoUrl = user.photoUrl
-            tv_1.text = name
-            tv_2.text = email
+            tv_1.text = "Bienvenidx "+name+" a Qué Comemos?"
+            tv_2.text = "@Derechos Reservados....by CarlosRamundo."
             img.setImageURI(photoUrl)
         }
     }
@@ -75,10 +78,8 @@ class MainActivity : AppCompatActivity() {
         // Choose authentication providers
         val providers = arrayListOf(
             AuthUI.IdpConfig.EmailBuilder().build(),
-            AuthUI.IdpConfig.PhoneBuilder().build(),
             AuthUI.IdpConfig.GoogleBuilder().build(),
-            AuthUI.IdpConfig.FacebookBuilder().build(),
-            AuthUI.IdpConfig.TwitterBuilder().build()
+            AuthUI.IdpConfig.FacebookBuilder().build()
         )
 
         // Create and launch sign-in intent
@@ -86,6 +87,8 @@ class MainActivity : AppCompatActivity() {
             AuthUI.getInstance()
                 .createSignInIntentBuilder()
                 .setAvailableProviders(providers)
+                .setLogo(R.drawable.logo)
+                .setTheme(R.style.AppTheme)
                 .build(),
             RC_SIGN_IN
         )
