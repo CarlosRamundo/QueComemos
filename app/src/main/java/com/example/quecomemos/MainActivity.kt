@@ -4,16 +4,17 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.quecomenos.R
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.quecomemos.R
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
-import com.facebook.FacebookSdk
-import com.facebook.appevents.AppEventsLogger
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,8 +24,11 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         session()
+        val Img = img
+        Glide.with(this).load("http://dulcegloriaaccesorios.com.ar/QueComemos.png")
+            .apply(RequestOptions.circleCropTransform())
+            .into(Img)
 
     }//***********fin OnCreate********************
 
@@ -41,12 +45,58 @@ class MainActivity : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
         user?.let {
             // Name, email address, and profile photo Url
-            val name = user.displayName
-            val email = user.email
+            val name = "Bienvenidx " + user.displayName + "."
             val photoUrl = user.photoUrl
-            tv_1.text = "Bienvenidx "+name+" a Qué Comemos?"
-            tv_2.text = "@Derechos Reservados....by CarlosRamundo."
+            val imgUser = img_user
+            Glide.with(this).load(photoUrl)
+                .apply(RequestOptions.circleCropTransform())
+                .into(imgUser)
+            tv_1.text = name
             img.setImageURI(photoUrl)
+        }
+        //**************boton al azar***************
+        btn_azar.setOnClickListener {
+
+        }
+        //**************boton al saludable***************
+        btn_saludable.setOnClickListener {
+
+        }//**************boton al pastas***************
+        btn_pastas.setOnClickListener {
+
+        }
+        //**************boton al carnes***************
+        btn_carnes.setOnClickListener {
+
+        }
+        //**************boton al rapidas***************
+        btn_rapidas.setOnClickListener {
+
+        }
+        //**************boton al veganas***************
+        btn_vegana.setOnClickListener {
+
+        }
+        //**************boton al pescados***************
+        btn_pescados.setOnClickListener {
+
+        }
+        //**************boton al economicas***************
+        btn_economicas.setOnClickListener {
+
+        }
+        //**************boton al gourmet***************
+        btn_gourmet.setOnClickListener {
+
+        }
+        //**************boton al postres***************
+        btn_postres.setOnClickListener {
+
+        }
+        //****************acercade********************
+        img_derechos.setOnClickListener {
+            val intent = Intent(this, AcercaDe::class.java)
+            startActivity(intent)
         }
     }
 
@@ -58,7 +108,11 @@ class MainActivity : AppCompatActivity() {
 
             if (resultCode == Activity.RESULT_OK) {
                 val user = FirebaseAuth.getInstance().currentUser
-                Toast.makeText(this, "Bienvenido/a "+ user?.displayName.toString()+" a Qué Comemos?", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Bienvenido/a " + user?.displayName.toString() + " a Qué Comemos?",
+                    Toast.LENGTH_LONG
+                ).show()
             } else {
                 showAlert()
             }

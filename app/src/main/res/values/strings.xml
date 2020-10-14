@@ -1,9 +1,20 @@
 <resources>
-    <string name="app_name">Que Comenos</string>
+    <string name="app_name">Que Comemos</string>
 
     <string name="show_alert">Error de registro o ingreso de usuario, revise los dÐtos y vuelva a intentarlo!!</string>
     <string name="facebook_application_id" translatable="false">443268619965477</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb443268619965477</string>
-
+    <string name="btn_saludable">Saludables</string>
+    <string name="btn_pastas">Pastas</string>
+    <string name="btn_carnes">Carnes</string>
+    <string name="btn_rapidas">Rapidas</string>
+    <string name="btn_veganas">Veganas</string>
+    <string name="btn_pescados">Pescados</string>
+    <string name="btn_economicas">Económicas</string>
+    <string name="btn_gourmet">Gourmet</string>
+    <string name="btn_postres">Postres</string>
+    <string name="btn_azar">Hoy, Qué Comemos?</string>
+    <string name="derechos">"@Todos los derechos reservados."</string>
+    <string name="autor">por - Carlos Ramundo.</string>
 
 </resources>
