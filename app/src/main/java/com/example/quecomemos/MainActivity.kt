@@ -56,42 +56,52 @@ class MainActivity : AppCompatActivity() {
         }
         //**************boton al azar***************
         btn_azar.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //**************boton al saludable***************
         btn_saludable.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }//**************boton al pastas***************
         btn_pastas.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //**************boton al carnes***************
         btn_carnes.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //**************boton al rapidas***************
         btn_rapidas.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //**************boton al veganas***************
         btn_vegana.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //**************boton al pescados***************
         btn_pescados.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //**************boton al economicas***************
         btn_economicas.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //**************boton al gourmet***************
         btn_gourmet.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //**************boton al postres***************
         btn_postres.setOnClickListener {
-
+            val intent = Intent(this, Receta::class.java)
+            startActivity(intent)
         }
         //****************acercade********************
         img_derechos.setOnClickListener {

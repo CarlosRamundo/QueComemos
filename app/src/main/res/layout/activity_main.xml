@@ -170,11 +170,11 @@
 
             <ImageButton
                 android:id="@+id/img_derechos"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
-                android:contentDescription="@string/app_name"
-                tools:srcCompat="@drawable/acercade" />
+                android:contentDescription="@string/derechos"
+                app:srcCompat="@drawable/acercade" />
         </LinearLayout>
 
     </LinearLayout>

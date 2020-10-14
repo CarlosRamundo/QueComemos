@@ -21,13 +21,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/img_derechos"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@color/colorPrimary"
-            android:contentDescription="@string/app_name"
-            tools:srcCompat="@drawable/acercade" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/derechos"
+            app:srcCompat="@drawable/acercade" />
 
         <Space
             android:layout_width="match_parent"

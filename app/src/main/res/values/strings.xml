@@ -16,5 +16,9 @@
     <string name="btn_azar">Hoy, Qué Comemos?</string>
     <string name="derechos">"@Todos los derechos reservados."</string>
     <string name="autor">por - Carlos Ramundo.</string>
+    <string name="titulo">Titulo</string>
+    <string name="ingredientes">Ingredientes:..</string>
+    <string name="proceso">Proceso de elaboracion:..</string>
+    <string name="uri_photo_receta">UriPhotoReceta</string>
 
 </resources>
